@@ -47,3 +47,17 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
+body {
+	font-family: "Hanken Grotesk", serif;
+}
+
+.display-score {
+  background-color: hsl(252, 100%, 67%);
+
+	.numerical-score {
+		background-color: hsl(241, 81%, 54%);
+	}
+}
