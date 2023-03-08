@@ -57,7 +57,7 @@ body {
 }
 
 .display-score {
-  background-color: hsl(252, 100%, 67%);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   text-align: center;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -69,7 +69,7 @@ body {
   padding: 20px 0;
 }
 .display-score .numerical-score {
-  background-color: hsl(241, 81%, 54%);
+  background-color: hsla(256, 72%, 46%, 0.5);
   display: inline-block;
   height: 120px;
   width: 120px;
@@ -128,12 +128,18 @@ body {
 .results .chart .first-bar div {
   display: flex;
 }
+.results .chart .first-bar div p {
+  color: red;
+}
 .results .chart .second-bar {
   display: flex;
   justify-content: space-between;
 }
 .results .chart .second-bar div {
   display: flex;
+}
+.results .chart .second-bar div p {
+  color: yellow;
 }
 .results .chart .third-bar {
   display: flex;
@@ -142,12 +148,18 @@ body {
 .results .chart .third-bar div {
   display: flex;
 }
+.results .chart .third-bar div p {
+  color: green;
+}
 .results .chart .fourth-bar {
   display: flex;
   justify-content: space-between;
 }
 .results .chart .fourth-bar div {
   display: flex;
+}
+.results .chart .fourth-bar div p {
+  color: blue;
 }
 
 button {
