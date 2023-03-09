@@ -182,4 +182,24 @@ body {
   -moz-border-radius: 128px;
   -ms-border-radius: 128px;
   -o-border-radius: 128px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 600px;
+    padding-right: 600px;
+  }
+  .display-score {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    flex: 1;
+    height: 50vh;
+  }
+  .results {
+    flex: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
