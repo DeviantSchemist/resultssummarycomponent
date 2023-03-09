@@ -61,6 +61,10 @@ table {
   opacity: 0.5;
 }
 
+.hand-cursor {
+  cursor: pointer;
+}
+
 body {
   font-family: "Hanken Grotesk", serif;
 }
@@ -189,11 +193,20 @@ body {
   height: 56px;
   background-color: #303B59;
   color: white;
+  outline: none;
   border-radius: 128px;
   -webkit-border-radius: 128px;
   -moz-border-radius: 128px;
   -ms-border-radius: 128px;
   -o-border-radius: 128px;
+}
+.results button:hover {
+  background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
 }
 
 @media only screen and (min-width: 1024px) {
