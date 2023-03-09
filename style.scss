@@ -143,12 +143,15 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.first-bar {
 			display: flex;
 			justify-content: space-between;
+			background-color: rgb(243, 235, 235);
+			padding: 10px 10px;
 
 			div {
 				display: flex;
 
 				p {
-					color: red;
+					color: #FF5555;
+					margin-left: 10px;
 				}
 			}
 		}
@@ -156,12 +159,15 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.second-bar {
 			display: flex;
 			justify-content: space-between;
+			background-color: rgb(243, 235, 235);
+			padding: 10px 10px;
 
 			div {
 				display: flex;
 
 				p {
-					color: yellow;
+					color: #FFB21E;
+					margin-left: 10px;
 				}
 			}
 		}
@@ -169,12 +175,15 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.third-bar {
 			display: flex;
 			justify-content: space-between;
+			background-color: rgb(243, 235, 235);
+			padding: 10px 10px;
 
 			div {
 				display: flex;
 
 				p {
-					color: green;
+					color: #00BB8F;
+					margin-left: 10px;
 				}
 			}
 		}
@@ -182,12 +191,15 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.fourth-bar {
 			display: flex;
 			justify-content: space-between;
+			background-color: rgb(243, 235, 235);
+			padding: 10px 10px;
 
 			div {
 				display: flex;
 
 				p {
-					color: blue;
+					color: #1125D6;
+					margin-left: 10px;
 				}
 			}
 		}
@@ -213,8 +225,8 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		justify-content: center;
 		align-items: center;
 		height: 100vh;
-		padding-left: 600px;
-		padding-right: 600px;
+		margin-left: 600px;
+		margin-right: 600px;
 	}
 
 	.display-score {
@@ -222,6 +234,28 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		border-top-right-radius: 40px;
 		flex: 1;
 		height: 50vh;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		>p:first-child {
+			font-size: 24px;
+		}
+
+		.numerical-score {
+			height: 200px;
+			width: 200px;
+		}
+
+		>h2 {
+			font-size: 32px;
+		}
+
+		>p:nth-of-type(2) {
+			font-size: 18px;
+		}
 	}
 
 	.results {
