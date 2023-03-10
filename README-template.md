@@ -6,7 +6,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,9 +14,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,22 +24,22 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+##### Desktop View
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Desktop View](./assets/images/desktopscreenshot.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+##### Mobile View
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile View](./assets/images/mobilescreenshot.png)
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/DeviantSchemist/resultssummarycomponent)
+- Live Site URL: [Live Site](https://sparkling-longma-26c3c3.netlify.app/)
 
 ## My process
 
@@ -50,62 +47,85 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- SASS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I built the component using standard HTML5 and CSS. I worked in a mobile first workflow, making all the styles for the mobile view first, then the desktop view. I recognize the importance of this workflow and how it affects development time. Semantic HTML was added in order to be complaint with accessibility standards.
 
-To see how you can add code snippets, see below:
+I used SASS for the styling. This was my first time working on a project using this. I especially loved the ability to nest CSS styles, which made editing styles SO much easier for me.
+
+I used plain Javascript in order to fetch the data from the JSON file and render it into the HTML. However, the data fetching does not work unless the JSON file is uploaded to a live server. I was able to circumvent this problem by using the Live Server extension in VS Code.
+
+**See below for how I accomplished the JSON rendering**:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<section class="results">
+  <h2>Summary</h2>
+  <section class="chart" id="displayChart">
+  </section>
+  <button class="hand-cursor">Continue</button>
+</section>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const displayData = jsonData => {
+  document.getElementById("displayChart")
+    .innerHTML += `
+      <article class="first-bar">
+        <div>
+          <img src=${jsonData[0].icon} alt=${jsonData[0].category}>
+          <p>${jsonData[0].category}</p>
+        </div>
+        <p><span class="bold">${jsonData[0].score}</span> <span class="light-navy">/ 100</span></p>
+      </article>
+      <article class="second-bar">
+        <div>
+          <img src=${jsonData[1].icon} alt=${jsonData[1].category}>
+          <p>${jsonData[1].category}</p>
+        </div>  
+        <p><span class="bold">${jsonData[1].score}</span> <span class="light-navy">/ 100</span></p>
+      </article>
+      <article class="third-bar">
+        <div>
+          <img src=${jsonData[2].icon} alt=${jsonData[2].category}>
+          <p>${jsonData[2].category}</p>
+        </div>
+        <p><span class="bold">${jsonData[2].score}</span> <span class="light-navy">/ 100</span></p>  
+      </article>
+      <article class="fourth-bar">
+        <div>
+          <img src=${jsonData[3].icon} alt=${jsonData[3].category}>
+          <p>${jsonData[3].category}</p>
+        </div>
+        <p><span class="bold">${jsonData[3].score}</span> <span class="light-navy">/ 100</span></p>  
+      </article>
+    `
+}
+
+const handleDisplay = () => {
+  fetch("./data.json")
+    .then(response => response.json())
+    .then(json => displayData(json))
+    .catch(err => console.error(err));
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I will continue focusing on writing accessible code. Accessibility is something that is very important in web development, and unfortunately many websites nowadays are not as accessible as they should be.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I will expand my knowledge of CSS flexbox, grid, and in general. My recent experience has been with using CSS within frameworks such as Tailwind and Bootstrap, which bloats HTML code. Using SASS for this project has helped me level up my CSS skills and write cleaner code.
+
+I will focus on achieving pixel perfect designs and responsive development. I realize I still have much to learn regarding this, and increasing my skill in these areas will be valuable for me as a web developer.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS Reset](https://meyerweb.com/eric/tools/css/reset/) - I use this CSS reset file for almost every project I work on. It is very thorough. (A "CSS Reset" file eliminates the default styling that many browsers have, enabling you to work on styling without any hidden styles already put there by the browser.)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@DeviantSchemist](https://www.frontendmentor.io/profile/DeviantSchemist)
