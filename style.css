@@ -69,6 +69,10 @@ body {
   font-family: "Hanken Grotesk", serif;
 }
 
+main {
+  max-width: 375px;
+}
+
 .display-score {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   text-align: center;
@@ -217,6 +221,7 @@ body {
     height: 100vh;
     margin-left: 600px;
     margin-right: 600px;
+    min-width: 736px;
   }
   .display-score {
     border-top-left-radius: 32px;

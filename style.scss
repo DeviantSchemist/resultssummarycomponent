@@ -68,6 +68,10 @@ body {
 $light-slate-blue: hsla(252, 100%, 67%, 1);
 $light-royal-blue: hsla(241, 81%, 54%, 1);
 
+main {
+	max-width: 375px;
+}
+
 .display-score {
   background-image: linear-gradient($light-slate-blue, $light-royal-blue);
 	text-align: center;
@@ -241,6 +245,8 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		height: 100vh;
 		margin-left: 600px;
 		margin-right: 600px;
+
+		min-width: 736px;
 	}
 
 	.display-score {
