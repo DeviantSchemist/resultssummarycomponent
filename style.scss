@@ -234,7 +234,7 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 
 // desktop resolution
 @media only screen and (min-width: 1024px) {
-	body {
+	main {
 		display: flex;
 		justify-content: center;
 		align-items: center;
