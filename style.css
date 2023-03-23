@@ -72,8 +72,8 @@ body {
 .display-score {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   text-align: center;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 .display-score > p {
   color: #CAC9FF;
@@ -219,8 +219,8 @@ body {
     margin-right: 600px;
   }
   .display-score {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
     flex: 1;
     height: 50vh;
     display: flex;
@@ -243,5 +243,8 @@ body {
   }
   .results {
     flex: 1;
+  }
+  .results h2 {
+    padding-top: 1.25em;
   }
 }/*# sourceMappingURL=style.css.map */

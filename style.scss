@@ -71,8 +71,8 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 .display-score {
   background-image: linear-gradient($light-slate-blue, $light-royal-blue);
 	text-align: center;
-	border-bottom-left-radius: 40px;
-	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 32px;
+	border-bottom-right-radius: 32px;
 
 	>p {
 		color: #CAC9FF;
@@ -244,8 +244,8 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 	}
 
 	.display-score {
-		border-top-left-radius: 40px;
-		border-top-right-radius: 40px;
+		border-top-left-radius: 32px;
+		border-top-right-radius: 32px;
 		flex: 1;
 		height: 50vh;
 
@@ -274,5 +274,9 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 
 	.results {
 		flex: 1;
+
+		h2 {
+			padding-top: 1.25em;
+		}
 	}
 }
