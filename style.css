@@ -70,7 +70,7 @@ body {
 }
 
 main {
-  max-width: 375px;
+  min-width: 375px;
 }
 
 .display-score {
