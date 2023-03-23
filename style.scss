@@ -147,7 +147,7 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.first-bar {
 			display: flex;
 			justify-content: space-between;
-			background-color: rgb(243, 235, 235);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FF5555;
 			padding: 10px 10px;
 
 			div {
@@ -163,7 +163,7 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.second-bar {
 			display: flex;
 			justify-content: space-between;
-			background-color: rgb(243, 235, 235);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FFB21E;
 			padding: 10px 10px;
 
 			div {
@@ -179,7 +179,7 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.third-bar {
 			display: flex;
 			justify-content: space-between;
-			background-color: rgb(243, 235, 235);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #00BB8F;
 			padding: 10px 10px;
 
 			div {
@@ -195,7 +195,7 @@ $light-royal-blue: hsla(241, 81%, 54%, 1);
 		.fourth-bar {
 			display: flex;
 			justify-content: space-between;
-			background-color: rgb(243, 235, 235);
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1125D6;
 			padding: 10px 10px;
 
 			div {
